@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create user</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="form-block">
+    <form action="#" th:action="@{/user-create}" th:object="${user}" method="post">
+        <label class="form-label" for="firstName">First name</label>
+        <input class="form-control" type="text" th:field="*{firstName}" id="firstName" placeholder="First Name"><br/>
+        <label class="form-label" for="lastName">Last name</label>
+        <input class="form-control" type="text" th:field="*{lastName}" id="lastName" placeholder="Last Name"><br/>
+        <input type="submit" value="Создать пользователя">
+    </form></div>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
